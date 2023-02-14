@@ -1,14 +1,18 @@
 <template>
-    <h2>03 Space launch 101</h2>
-    <nav>
-        <router-link
-            v-for="piece in technology"
-            :key="piece.name"
-            :to="{name: 'piece.show', params: { pieceName: piece.name}}"
-        >{{ piece.name }}
-        </router-link>
-    </nav>
-    <router-view/>
+    <div class="ghost-space"></div>
+    <div class="center-box">
+        <h2>03 Space launch 101</h2>
+        <nav>
+            <router-link
+                v-for="piece in technology"
+                :key="piece.name"
+                :to="{name: 'piece.show', params: { pieceName: piece.name}}"
+            >{{ piece.name }}
+            </router-link>
+        </nav>
+        <router-view/>
+    </div>
+
 
 </template>
 

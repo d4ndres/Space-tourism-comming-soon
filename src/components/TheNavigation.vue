@@ -1,11 +1,11 @@
 <template>
 	<nav class="nav">
-		<router-link :to="{name: 'home'}">Home</router-link>
+		<router-link :to="{name: 'home'}">00 Home</router-link>
 		<router-link 
-			v-for="(value, key) in data"
+			v-for="(value, key, index) in data"
 			:key="key"  
 			:to="{ name: key}"
-			>{{key}}</router-link>
+			>0{{index + 1}} {{key}}</router-link>
 	</nav>
 </template>
 
@@ -22,8 +22,27 @@ export default {
 
 <style scoped>
 	.nav > * {
-		padding: 10px;
 		text-transform: uppercase;
+		margin: 0 1.5rem;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.router-link-active {
+		border-bottom: 1px solid #fff;
+	}
+	.nav {
+		top: 5vh;
+		height: 15vh;
+		position: absolute;
+		right: 0;
+		background-color: rgba(255,255,255,0.1);
+		backdrop-filter: blur(20px);
+		width: 55vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 </style>

@@ -1,26 +1,19 @@
 <template>
-    <h2>01 Pick your destination</h2>
-    <!-- <nav>
-        <a 
-            v-for="destination in destinations"
-            :key="destination.name"
-        >{{ destination.name }}</a>
-    </nav>
+    <div class="ghost-space"></div>
+    <div class="center-box">
 
-    <Destination 
-        v-for="destination in destinations"
-        :key="destination.name"
-        :destination="destination"
-    /> -->
-    <nav>
-        <router-link
-            v-for="destination in destinations"
-            :key="destination.name"
-            :to="{name: 'destination.show', params: { destinationName: destination.name}}"
-        >{{ destination.name }}
-        </router-link>
-    </nav>
-    <router-view/>
+        <h2>01 Pick your destination</h2>
+        <nav>
+            <router-link
+                v-for="destination in destinations"
+                :key="destination.name"
+                :to="{name: 'destination.show', params: { destinationName: destination.name}}"
+            >{{ destination.name }}
+            </router-link>
+        </nav>
+        <router-view/>
+
+    </div>
 
 </template>
 
@@ -38,5 +31,7 @@ import { mapState } from 'vuex';
 </script>
 
 <style scoped>
-
+    .center-box{
+        flex-direction: column;
+    }
 </style>

@@ -1,12 +1,27 @@
 <template>
-    <div>
-        <h1>Crew</h1>
-    </div>
+    <h2>02 Meet your crew</h2>
+    <nav>
+        <router-link
+            v-for="member in crew"
+            :key="member.name"
+            :to="{name: 'member.show', params: { memberName: member.name}}"
+        >{{ member.name }}
+        </router-link>
+    </nav>
+    <router-view/>
+
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
     export default {
-        
+        name: 'Crew',
+        computed:{
+            ...mapState({
+                crew: state => state.data.crew
+            })
+        },
     }
 </script>
 

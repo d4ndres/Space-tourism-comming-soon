@@ -1,20 +1,21 @@
 <template>
-
-    <h1>{{ destination.name }}</h1>
     <figure>
         <img :src=" srcImg( destination.images.png ) " :alt="destination.name">
     </figure>
-    <p>{{ destination.description }}</p>
     <div>
+        <h1>{{ destination.name }}</h1>
+        <p>{{ destination.description }}</p>
         <div>
-            <p>AVG. DISTANCE</p>
-            <h3>{{ destination.distance }}</h3>
-        </div>
-        <div>
-            <p>EST. TRAVEL TIME</p>
-            <h3>{{ destination.travel }}</h3>
-        </div>
-    </div>    
+            <div>
+                <p>AVG. DISTANCE</p>
+                <h3>{{ destination.distance }}</h3>
+            </div>
+            <div>
+                <p>EST. TRAVEL TIME</p>
+                <h3>{{ destination.travel }}</h3>
+            </div>
+        </div>    
+    </div>
 </template>
 
 <script>

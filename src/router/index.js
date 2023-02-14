@@ -20,13 +20,27 @@ const routes = [
   },
   {
     path: '/crew',
+    redirect: '/crew/Douglas Hurley',
     name: 'crew',
-    component: () => import(/* webpackChunkName: "crew" */ '../views/Crew.vue')
+    component: () => import(/* webpackChunkName: "crew" */ '../views/Crew.vue'),
+    children: [{
+      path: ':memberName',
+      name: 'member.show',
+      component: () => import(/* webpackChunkName: "member" */ '../components/CrewMember.vue'),
+      props: true
+    }]
   },
   {
     path: '/technology',
+    redirect: '/technology/Launch vehicle',
     name: 'technology',
-    component: () => import(/* webpackChunkName: "technology" */ '../views/Technology.vue')
+    component: () => import(/* webpackChunkName: "technology" */ '../views/Technology.vue'),
+    children: [{
+      path: ':pieceName',
+      name: 'piece.show',
+      component: () => import(/* webpackChunkName: "piece" */ '../components/TechnologyPiece.vue'),
+      props: true
+    }]
   },
 ]
 

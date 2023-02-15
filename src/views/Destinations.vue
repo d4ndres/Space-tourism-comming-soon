@@ -43,7 +43,13 @@ import { mapState } from 'vuex';
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-bottom: var(--ghost-space);
+        /* padding-bottom: var(--ghost-space); */
+    }
+    .center-box{
+        height: 85vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .destinations{
         background: url('@/assets/destination/background-destination-desktop.jpg');

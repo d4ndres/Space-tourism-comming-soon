@@ -35,6 +35,7 @@ export default {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		z-index: 2;
 		
 	}
 	figure {
@@ -64,7 +65,7 @@ export default {
 		height: 1px;
 		width: 40vw;
 		transform: translate(3vw);
-		z-index: 1;
+		z-index: 2;
 	}
 	
 

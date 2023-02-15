@@ -1,17 +1,20 @@
 <template>
-    <div class="ghost-space"></div>
-    <div class="center-box">
-        <h2>02 Meet your crew</h2>
-        <nav>
-            <router-link
-                v-for="member in crew"
-                :key="member.name"
-                :to="{name: 'member.show', params: { memberName: member.name}}"
-            >{{ member.name }}
-            </router-link>
-        </nav>
-        <router-view/>
-    </div>
+    <main class="crew">
+        <div class="ghost-space"></div>
+        <div class="center-box">
+            <h2 class="title-page"> <span>02</span> Meet your crew</h2>
+            <nav class="sub-nav">
+                <router-link
+                    class="cicle-member"
+                    v-for="member in crew"
+                    :key="member.name"
+                    :to="{name: 'member.show', params: { memberName: member.name}}"
+                >
+                </router-link>
+            </nav>
+            <router-view/>
+        </div>
+    </main>
 
 </template>
 
@@ -29,5 +32,48 @@ import { mapState } from 'vuex';
 </script>
 
 <style scoped>
+    .crew{
+        background-image: url('@/assets/crew/background-crew-desktop.jpg');
+        background-position: top left;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .center-box{
+        height: 85vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .title-page span{
+        font-weight: bold;
+        padding-right: 1rem;
+    }
+    .title-page{
+        font-family: 'Barlow Condensed';
+        font-weight: 400;
+        font-size: 2rem;
+        letter-spacing: 4.725px;
+        text-transform: uppercase;     
+        margin-bottom: 6rem;
+    }
+
+    .cicle-member{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: rgba(255,255,255,0.3);
+        display: block;
+    }
+    .sub-nav {
+        width: 150px;
+        display: flex;
+        justify-content: space-between;
+        order: 1;
+    }
+
+    .router-link-active{
+        border-bottom: none;
+        background-color: var(--white);
+    }
 
 </style>

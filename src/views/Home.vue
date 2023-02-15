@@ -27,7 +27,8 @@
     .home {
         background: url('@/assets/home/background-home-desktop.jpg');
         background-position: top left;
-
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     .center-box {

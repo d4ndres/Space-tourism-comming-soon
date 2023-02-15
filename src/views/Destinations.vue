@@ -38,9 +38,18 @@ import { mapState } from 'vuex';
 </script>
 
 <style scoped>
+    
+    .destinations {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: var(--ghost-space);
+    }
     .destinations{
         background: url('@/assets/destination/background-destination-desktop.jpg');
         background-position: top left;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     .title-page span{
         font-weight: bold;
@@ -52,6 +61,7 @@ import { mapState } from 'vuex';
         font-size: 2rem;
         letter-spacing: 4.725px;
         text-transform: uppercase;     
+        margin-bottom: 4rem;
     }
     .container-nav {
         display: flex;
@@ -59,7 +69,7 @@ import { mapState } from 'vuex';
     }
 
     .sub-nav{
-        width: 450px;
+        width: 420px;
         display: flex;
         justify-content: flex-start;
     }
@@ -71,13 +81,12 @@ import { mapState } from 'vuex';
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		font-size: 15px;
+		font-size: 1.2rem;
+        padding-bottom: .5rem;
 	}
     .sub-nav > *:first-child{
         margin-left: 0;
     }
-	.router-link-active{
-		border-bottom: 1px solid var(--white);
-	}
+
 
 </style>

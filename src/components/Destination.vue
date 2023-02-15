@@ -5,7 +5,7 @@
         </figure>
         <div class="about">
             <h1 class="about__title">{{ destination.name }}</h1>
-            <p class="about__content">{{ destination.description }}</p>
+            <p class="about__description">{{ destination.description }}</p>
             <div class="line-decoration"></div>
             <div class="about__stats">
                 <div class="stats__item">
@@ -45,10 +45,10 @@ import { mapGetters } from 'vuex';
     .destination{
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
     }
     .destination > * {
-        width: 450px;
+        width: 420px;
     }
 
     .about__title{
@@ -56,12 +56,14 @@ import { mapGetters } from 'vuex';
         font-style: normal;
         font-weight: 400;
         font-size: 6.5rem;       
-        text-transform: uppercase; 
+        text-transform: uppercase;
+        margin: 2rem 0 1rem;
     }
 
-    .about__content {
-        font-size: 1.1rem;
+    .about__description {
+        font-size: 1.35rem;
         line-height: 2rem;
+        margin-bottom: 4rem;
     }
 	.line-decoration{
 		border-bottom: solid 1px var(--gray);
@@ -72,12 +74,21 @@ import { mapGetters } from 'vuex';
 	}
 
     .about__stats{
-        display: flex;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 2rem;
+        text-transform: uppercase;
     }
     .stats__item{
         display: flex;
         flex-direction: column;
-
+        font-size: 1rem;
+        color: var(--gray);
+    }
+    .stats__item h3{
+        font-family: 'Bellefair';
+        font-weight: 400;
+        color: var(--white);
+        font-size: 2rem;
     }
 </style>

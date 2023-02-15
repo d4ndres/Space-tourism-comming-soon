@@ -1,5 +1,5 @@
 <template>
-    <main class="home ">
+    <main class="home">
         <div class="ghost-space"></div>
         <div class="center-box">
 
@@ -12,53 +12,62 @@
                     because we'll give you a truly out of this world experience!
                 </p>
             </div>
-            <div class="home__explore">
-                <router-link :to="{name: 'destinations'}">Explore</router-link>
-            </div>
+            
+            <router-link 
+                class="explore"
+                :to="{name: 'destinations'}">Explore</router-link>
+            
 
         </div>
     </main>
 </template>
 
 <style scoped>
+
     .home {
         background: url('@/assets/home/background-home-desktop.jpg');
         background-position: top left;
 
     }
 
-    /* .home {
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        min-width: 100vw;
-        min-height: 80vh;
-        
+    .center-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: var( --ghost-space );
+        min-height: calc( 100vh - var( --ghost-space ));
     }
+
     .home__about{
-        width: min(80vw, 385px);
+        width: 450px;
     }
-    .home__about__title{
-        margin: 1rem 0 2rem;
+    .home__about__introduction{
+        font-size: 1.9rem;
+        text-transform: uppercase;
     }
-    .home__about__content{
-        text-align: justify;
+    .home__about__title {
+        font-family: 'Bellefair';
+        text-transform: uppercase;
+        font-size: 10rem;
     }
-    .home__explore {
-        width: 200px;
-        height: 200px;
+    .home__about__content {
+        font-size: 1.1rem;
+        line-height: 2rem;
+    }
+    .explore{
+        width: 18rem;
+        height: 18rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #fff;
+        font-size: 2rem;
+        letter-spacing: 2px;
+        font-family: 'Bellefair';
+        text-transform: uppercase;
+        background-color: var(--white);
+        color: var(--dark-blue);
         border-radius: 50%;
-        
     }
-    .home__explore > * {
-        color: #000;
-        font-size: 1.5rem;
-        letter-spacing: 6px;
-    }
-     */
 
 
 </style>

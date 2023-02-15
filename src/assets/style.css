@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap');
 
 :root{
     --dark-blue: #0B0D17;
@@ -13,13 +13,12 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
 }
 
 html {
     font-size: 15px;
-    font-family: 'Barlow', sans-serif;
-    font-family: 'Bellefair', serif;
     color: var(--gray);
 }
 
@@ -48,9 +47,10 @@ main {
 
 .center-box {
     margin: 0 auto;
-    width: 81vw;
-    transform: translate(1.5vw);
+    width: 76vw;
+    transform: translate(-1vw);
     position: relative;
+    /* background-color: red; */
 }
 
 body::-webkit-scrollbar {

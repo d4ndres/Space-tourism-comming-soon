@@ -57,6 +57,7 @@ export default {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		font-size: 15px;
 	}
 	.line-decoration{
 		border-bottom: solid 1px var(--gray);
@@ -65,6 +66,9 @@ export default {
 		transform: translate(3vw);
 		z-index: 1;
 	}
-
-
+	
+	.router-link-active{
+		border-bottom: 1px solid var(--white);
+	}
+	
 </style>

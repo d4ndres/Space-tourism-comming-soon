@@ -1,23 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Roboto:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Bellefair&display=swap');
 
-html {
-    font-size: 15px;
-}
-
-h1{
-    font-weight: 300;
-    font-size: 8rem;
-}
-h1, h3 {
-    text-transform: uppercase;
-    letter-spacing: 6px;
-
-
-}
-
-h3 {
-    font-weight: 100;
-    font-size: 1rem
+:root{
+    --dark-blue: #0B0D17;
+    --gray: #D0D6F9;
+    --white: #fff;
+    --ghost-space: 15vh;
 }
 
 * {
@@ -28,19 +15,44 @@ h3 {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+
+html {
+    font-size: 15px;
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Bellefair', serif;
+    color: var(--gray);
+}
+
 figure{
     line-height: 0;
 }
 
 body {
-    background-color: #0B0E17;
-    color: #fff;
+    background-color: var(--dark-blue);
+    color: var(--white);
     min-height: 100vh;
     min-width: 100vw;
 }
 a {
-    color: #fff;
+    color: var(--white);
 }
-p {
-    color: #9597a1;
+
+main {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.ghost-space {
+    height: var(--ghost-space);
+}
+
+.center-box {
+    margin: 0 auto;
+    width: 81vw;
+    transform: translate(1.5vw);
+    position: relative;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }

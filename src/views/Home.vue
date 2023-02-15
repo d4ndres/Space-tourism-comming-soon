@@ -1,7 +1,8 @@
 <template>
-    <div class="home ">
+    <main class="home ">
         <div class="ghost-space"></div>
         <div class="center-box">
+
             <div class="home__about">
                 <h3 class="home__about__introduction">So, you want to travel to</h3>
                 <h1 class="home__about__title">Space</h1>
@@ -14,18 +15,23 @@
             <div class="home__explore">
                 <router-link :to="{name: 'destinations'}">Explore</router-link>
             </div>
+
         </div>
-    </div>
+    </main>
 </template>
 
 <style scoped>
     .home {
         background: url('@/assets/home/background-home-desktop.jpg');
+        background-position: top left;
+
+    }
+
+    /* .home {
         background-size: 100% 100%;
         background-repeat: no-repeat;
-        background-position: center;
         min-width: 100vw;
-        min-height: 100vh;
+        min-height: 80vh;
         
     }
     .home__about{
@@ -52,7 +58,7 @@
         font-size: 1.5rem;
         letter-spacing: 6px;
     }
-    
+     */
 
 
 </style>

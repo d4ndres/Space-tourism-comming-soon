@@ -1,8 +1,9 @@
 <template>
     <article class="destination">
-        <figure class="figure">
+        <figure>
             <img :src=" srcImg( destination.images.png ) " :alt="destination.name">
         </figure>
+        
         <div class="about">
             <h1 class="about__title">{{ destination.name }}</h1>
             <p class="about__description">{{ destination.description }}</p>
@@ -90,5 +91,47 @@ import { mapGetters } from 'vuex';
         font-weight: 400;
         color: var(--white);
         font-size: 2rem;
+    }
+
+    @media screen and (max-width: 1440px) {
+
+        .destination{
+            justify-content: space-between;
+        }
+
+        .destination > * {
+            width: 400px;
+        }
+
+        img {
+            width: 100%;
+            padding: 30px;
+        }
+
+        .about__title{
+            font-size: 5.5rem;       
+            margin: 1.5rem 0 .5rem;
+        }
+
+        .about__description {
+            font-size: 1.35rem;
+            margin-bottom: 2rem;
+        }
+
+        .about__stats{
+            margin-top: 1rem;
+        }
+        .stats__item{
+            display: flex;
+            flex-direction: column;
+            font-size: 1rem;
+            color: var(--gray);
+        }
+        .stats__item h3{
+            font-family: 'Bellefair';
+            font-weight: 400;
+            color: var(--white);
+            font-size: 1.5rem;
+        }       
     }
 </style>

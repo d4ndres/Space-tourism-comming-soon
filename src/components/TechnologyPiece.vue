@@ -1,7 +1,9 @@
 <template>
     <article class="piece">
         
-        <img :src=" srcImg( piece.images.portrait ) " :alt="piece.name">
+        <figure>
+            <img :src=" srcImg( piece.images.portrait ) " :alt="piece.name">
+        </figure>
         
         <div class="about">
             <p>THE TERMINOLOGY...</p>
@@ -37,9 +39,13 @@ import { mapGetters } from 'vuex';
         display: flex;
         align-items: center;
     }
-    img {
+    figure{
         position: absolute;
+        width: min(375px, 100vw);
         right: 0;
+    }
+    img {
+        width: 100%;
     }
     .about {
         width: 445px;

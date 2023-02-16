@@ -68,6 +68,28 @@
         background-color: var(--white);
         color: var(--dark-blue);
         border-radius: 50%;
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3);
+        transition: .4s;
+    }
+    .explore:hover {
+        box-shadow: 0 0 0px 3rem rgba(255, 255, 255, .4);
+    }
+    @media screen and (max-width: 1440px) {
+
+        .home__about__introduction{
+            font-size: 1.8rem;
+        }
+        .home__about__title {
+            font-size: 8rem;
+        }
+
+        .explore{
+            width: 14rem;
+            height: 14rem;
+            font-size: 1.5rem;
+        }
+
+        
     }
 
 

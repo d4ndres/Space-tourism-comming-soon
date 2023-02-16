@@ -3,7 +3,6 @@
         <div class="ghost-space"></div>
         <div class="center-box">
     
-
             <h2 class="title-page"> <span>01</span> Pick your destination</h2>
             <div class="container-nav">
                 <div class="helper-postion-nav"></div>
@@ -16,8 +15,9 @@
                     </router-link>
                 </nav>
             </div>
+            
             <router-view/>
-    
+            
 
         </div>
     </main>
@@ -43,13 +43,10 @@ import { mapState } from 'vuex';
         display: flex;
         flex-direction: column;
         justify-content: center;
-        /* padding-bottom: var(--ghost-space); */
     }
     .center-box{
-        height: 85vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        min-height: calc( 100vh - var( --ghost-space ));
+
     }
     .destinations{
         background: url('@/assets/destination/background-destination-desktop.jpg');
@@ -57,17 +54,18 @@ import { mapState } from 'vuex';
         background-size: cover;
         background-repeat: no-repeat;
     }
-    .title-page span{
-        font-weight: bold;
-        padding-right: 1rem;
-    }
     .title-page{
         font-family: 'Barlow Condensed';
         font-weight: 400;
         font-size: 2rem;
         letter-spacing: 4.725px;
         text-transform: uppercase;     
-        margin-bottom: 4rem;
+        margin: 2rem 0 0;
+        
+    }
+    .title-page span{
+        font-weight: bold;
+        padding-right: 1rem;
     }
     .container-nav {
         display: flex;
@@ -94,5 +92,19 @@ import { mapState } from 'vuex';
         margin-left: 0;
     }
 
+    @media screen and (max-width: 1440px) {
+
+        .container-nav {
+            display: flex;
+            justify-content: space-between;
+        }
+        .container-nav  > * {
+            width: 400px;
+
+        }
+
+
+
+    }
 
 </style>

@@ -60,3 +60,13 @@ body::-webkit-scrollbar {
 .router-link-active{
     border-bottom: 2px solid var(--white);
 }
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}

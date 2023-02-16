@@ -58,7 +58,7 @@ export default {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		font-size: 15px;
+		font-size: 1.2rem;
 	}
 	.line-decoration{
 		border-bottom: solid 1px var(--gray);

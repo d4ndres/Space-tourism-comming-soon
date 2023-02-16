@@ -1,6 +1,8 @@
 <template>
     <article class="member">
-        <img :src=" srcImg( member.images.png ) " :alt="member.name">
+        <figure>
+            <img :src=" srcImg( member.images.png ) " :alt="member.name">
+        </figure>
         <div class="about">
             <h2 class="about__role">{{ member.role }}</h2>
             <h1 class="about__name">{{ member.name }}</h1>
@@ -30,14 +32,15 @@ import { mapGetters } from 'vuex';
 </script>
 
 <style scoped>
-    .member{
-        height: 420px;
-    }
 
-    img{
+    figure{
         position: absolute;
         bottom: 0;
         right: 0;
+        height: 500px;
+    }
+    figure img {
+        height: 100%;
     }
 
     .about__role{
@@ -56,7 +59,7 @@ import { mapGetters } from 'vuex';
     }
     .about__bio{
         font-weight: 400;
-        width: 445px;
+        width: min(375px, 80vw);
         font-size: 1.35rem;
         line-height: 2rem;
         color: var(--gray);

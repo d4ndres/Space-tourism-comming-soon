@@ -2,17 +2,24 @@
     <main class="crew">
         <div class="ghost-space"></div>
         <div class="center-box">
+
             <h2 class="title-page"> <span>02</span> Meet your crew</h2>
-            <nav class="sub-nav">
-                <router-link
-                    class="cicle-member"
-                    v-for="member in crew"
-                    :key="member.name"
-                    :to="{name: 'member.show', params: { memberName: member.name}}"
-                >
-                </router-link>
-            </nav>
-            <router-view/>
+            <div class="container-geometry">
+
+                <nav class="sub-nav">
+                    <router-link
+                        class="cicle-member"
+                        v-for="member in crew"
+                        :key="member.name"
+                        :to="{name: 'member.show', params: { memberName: member.name}}"
+                    >
+                    </router-link>
+                </nav>
+                <router-view/>
+
+            </div>
+            
+
         </div>
     </main>
 
@@ -39,10 +46,16 @@ import { mapState } from 'vuex';
         background-repeat: no-repeat;
     }
     .center-box{
-        height: 85vh;
+        min-height: calc( 100vh - var( --ghost-space ));
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
+        
+    }
+    .container-geometry{
+        display: flex;
+        flex-direction: column;
+        
     }
     .title-page span{
         font-weight: bold;
@@ -54,7 +67,7 @@ import { mapState } from 'vuex';
         font-size: 2rem;
         letter-spacing: 4.725px;
         text-transform: uppercase;     
-        margin-bottom: 6rem;
+        margin: 2rem 0 0;
     }
 
     .cicle-member{
@@ -67,8 +80,9 @@ import { mapState } from 'vuex';
     .sub-nav {
         width: 150px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between; 
         order: 1;
+        margin: 3rem 0;
     }
 
     .router-link-active{

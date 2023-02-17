@@ -37,6 +37,10 @@
         align-items: flex-end;
         padding-bottom: var( --ghost-space );
         min-height: calc( 100vh - var( --ghost-space ));
+        
+    }
+    p, h3 {
+        color: var(--gray);
     }
 
     .home__about{
@@ -90,6 +94,25 @@
         }
 
         
+    }
+    @media screen and (max-width: 768px){
+
+        .home {
+            background: url('@/assets/home/background-home-tablet.jpg');
+            background-position: top left;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .center-box {
+            flex-wrap: wrap;
+            align-items:end;
+            justify-content: center;
+            text-align: center;
+            
+        }
+        .home__about__title {
+            margin: 2rem 0;
+        }
     }
 
 

@@ -45,7 +45,7 @@ import { mapGetters } from 'vuex';
 <style scoped>
     .destination{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: flex-start;
     }
     .destination > * {
@@ -74,6 +74,10 @@ import { mapGetters } from 'vuex';
         margin: 2rem 0 1rem;
 	}
 
+    p {
+        color: var(--gray);
+    }
+
     .about__stats{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -95,12 +99,9 @@ import { mapGetters } from 'vuex';
 
     @media screen and (max-width: 1440px) {
 
-        .destination{
-            justify-content: space-between;
-        }
 
         .destination > * {
-            width: 400px;
+            width: min(420px, 70vw);
         }
 
         img {
@@ -108,30 +109,28 @@ import { mapGetters } from 'vuex';
             padding: 30px;
         }
 
+     
+    }
+    @media screen and (max-width: 768px) {
+        .destination{
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .destination figure {
+            width: min( 320px, 80vw );
+            margin: 1rem 0;
+        }
+        figure img {
+            padding: 0;
+        }
         .about__title{
-            font-size: 5.5rem;       
-            margin: 1.5rem 0 .5rem;
+            font-size: 6rem;
+        }
+        .destination .about {
+            width: 75vw;
         }
 
-        .about__description {
-            font-size: 1.35rem;
-            margin-bottom: 2rem;
-        }
-
-        .about__stats{
-            margin-top: 1rem;
-        }
-        .stats__item{
-            display: flex;
-            flex-direction: column;
-            font-size: 1rem;
-            color: var(--gray);
-        }
-        .stats__item h3{
-            font-family: 'Bellefair';
-            font-weight: 400;
-            color: var(--white);
-            font-size: 1.5rem;
-        }       
     }
 </style>

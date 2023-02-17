@@ -96,7 +96,7 @@ import { mapState } from 'vuex';
 
         .container-nav {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
         }
         .container-nav  > * {
             width: 400px;
@@ -104,7 +104,21 @@ import { mapState } from 'vuex';
         }
 
 
+    }
+    @media screen and (max-width: 768px) {
+
+        .title-page{
+            font-weight: 400;
+            font-size: 1.5rem;
+            margin: 3rem 0;
+        }
+        .helper-postion-nav{
+            display: none;
+        }
+        .container-nav, .sub-nav{
+            justify-content: center;
+        }
+
 
     }
-
 </style>

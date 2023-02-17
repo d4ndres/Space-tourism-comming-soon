@@ -5,12 +5,12 @@
 		</figure>
 		<div class="line-decoration"></div>
 		<nav class="nav">
-			<router-link :to="{name: 'home'}">00 Home</router-link>
+			<router-link :to="{name: 'home'}"><span>00</span>Home</router-link>
 			<router-link 
 				v-for="(value, key, index) in data"
 				:key="key"  
 				:to="{ name: key}"
-				>0{{index + 1}} {{key}}</router-link>
+				><span>0{{index + 1}}</span>  {{key}}</router-link>
 		</nav>
 	</header>
 </template>
@@ -49,7 +49,7 @@ export default {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 55vw;
+		min-width: 55vw;
 	}
 	.nav > * {
 		text-transform: uppercase;
@@ -68,5 +68,17 @@ export default {
 		z-index: 2;
 	}
 	
+	@media screen and ( max-width: 768px ){
+		.header {
+			top: 0;
+		}
+		.nav {
+			height: calc( var(--ghost-space) );
+		}
 
+		.line-decoration, .nav > * span{
+			display: none;
+		}
+		
+	}
 </style>

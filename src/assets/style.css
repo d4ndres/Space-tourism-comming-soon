@@ -49,8 +49,6 @@ main {
     margin: 0 auto;
     width: 76vw;
     transform: translate(-1vw);
-    /* position: relative; */
-    /* background-color: red; */
 }
 
 body::-webkit-scrollbar {
@@ -69,4 +67,16 @@ body::-webkit-scrollbar {
 .v-enter-from,
 .v-leave-to {
   opacity: 0;
+}
+
+@media screen and ( min-width: 768px ) {
+    :root{
+        --ghost-space: 8vh;
+    }
+
+    .center-box {
+        margin: 0 auto;
+        width: 85vw;
+    }
+    
 }

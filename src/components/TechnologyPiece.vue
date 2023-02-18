@@ -68,17 +68,21 @@ import { mapGetters } from 'vuex';
 
     @media screen and (max-width: 768px) {
         figure{
-            /* position: absolute; */
+            position: relative;
             width: 100vw;
             height: 33vh;
         }       
         figure img {
             height: 100%;
             object-fit: cover;
-            object-position: bottom;
+            object-position: center;
         }
         .piece{
+            text-align: center;
             flex-direction: column;
+        }
+        .about{
+            margin: 2rem 0;
         }
     }
 </style>

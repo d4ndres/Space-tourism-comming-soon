@@ -116,16 +116,15 @@ import { mapState } from 'vuex';
         }
         .container-geometry {
             flex-direction: column;
-            height: 100%;
-            background-color: red;
             margin: 0;
             width: 100vw;
         }
         .sub-nav{
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                order: 1;
+            margin: 10px 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            order: 1;
         }
         .ghost-between-flex{
             display: none;

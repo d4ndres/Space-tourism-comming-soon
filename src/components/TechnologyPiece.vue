@@ -50,9 +50,7 @@ import { mapGetters } from 'vuex';
     .about {
         width: 445px;
     }
-    .piece{
-        display: flex;
-    }
+
     .about h1 {
         font-weight: 400;
         font-family: 'Bellefair';
@@ -66,5 +64,21 @@ import { mapGetters } from 'vuex';
         font-size: 1.35rem;
         line-height: 2rem;
         color: var(--gray);
+    }
+
+    @media screen and (max-width: 768px) {
+        figure{
+            /* position: absolute; */
+            width: 100vw;
+            height: 33vh;
+        }       
+        figure img {
+            height: 100%;
+            object-fit: cover;
+            object-position: bottom;
+        }
+        .piece{
+            flex-direction: column;
+        }
     }
 </style>

@@ -90,4 +90,23 @@ import { mapState } from 'vuex';
         background-color: var(--white);
     }
 
+    @media screen and (max-width: 768px) {
+        .crew{
+            background-image: url('@/assets/crew/background-crew-tablet.jpg');
+        }
+        .title-page{
+            font-weight: 400;
+            font-size: 1.5rem;
+            margin: 3rem 0;
+            align-self: flex-start;
+        }
+        .center-box{
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .container-geometry{
+            align-items: center;
+        }
+    }
+
 </style>

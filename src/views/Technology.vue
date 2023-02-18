@@ -102,4 +102,33 @@ import { mapState } from 'vuex';
         color: var(--dark-blue);
 
     }
+
+    @media screen and (max-width: 768px) {
+        .center-box{
+            width: 100vw;
+            justify-content: flex-start;
+        }       
+        .title-page{
+            transform: translate(0);
+            font-weight: 400;
+            font-size: 1.5rem;
+            margin: 3rem calc( 13vw/2);
+        }
+        .container-geometry {
+            flex-direction: column;
+            height: 100%;
+            background-color: red;
+            margin: 0;
+            width: 100vw;
+        }
+        .sub-nav{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                order: 1;
+        }
+        .ghost-between-flex{
+            display: none;
+        }
+    }
 </style>

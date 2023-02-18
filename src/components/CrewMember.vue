@@ -64,4 +64,25 @@ import { mapGetters } from 'vuex';
         line-height: 2rem;
         color: var(--gray);
     }
+
+    @media screen and (max-width: 768px) {
+        .member{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+        }
+        .about__bio{
+            width: 78vw;
+            font-size: 1.35rem;
+        }
+        figure{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 470px;
+           
+        }
+    }
 </style>

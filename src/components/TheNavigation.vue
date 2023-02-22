@@ -4,25 +4,35 @@
 			<img src="/assets/shared/logo.svg" alt="">
 		</figure>
 		<div class="line-decoration"></div>
-		<nav class="nav">
-			<router-link :to="{name: 'home'}"><span>00</span>Home</router-link>
+		<nav class="nav" :class="{'active': state}">
+			<router-link :to="{name: 'home'}" @click="updateState"><span>00</span>Home</router-link>
 			<router-link 
+				@click="updateState"
 				v-for="(value, key, index) in data"
 				:key="key"  
 				:to="{ name: key}"
 				><span>0{{index + 1}}</span>  {{key}}</router-link>
 		</nav>
+		<BurgerButton class="btn-burger"/>
 	</header>
 </template>
 
 <script>
-
+import BurgerButton from './BurgerButton.vue';
 import { mapState } from 'vuex';
 export default {
 	name: 'TheNavigation',
     computed:{
-      ...mapState(['data'])
-    }
+      ...mapState(['data', 'state'])
+    },
+	components: {
+		BurgerButton,
+	},
+	methods: {
+		updateState(){
+			this.$store.commit( 'updateState', false )
+		}
+	}
 }
 </script>
 
@@ -67,6 +77,9 @@ export default {
 		transform: translate(3vw);
 		z-index: 2;
 	}
+	.btn-burger{
+		visibility: hidden;
+	}
 	
 	@media screen and ( max-width: 768px ){
 		.header {
@@ -84,15 +97,43 @@ export default {
 
 	@media screen and ( max-width: 500px ) {
 		.header {
-			position: static;
+			width: 100vw;
+			top: 0;
+			
+			
+		}
+		figure{
+			padding: 10px;
+			z-index: 2;
 		}
 		.nav{
-			position: absolute;
-			margin: 0;
-			top: 0; left: 0; right: 0; bottom: 0;
+			position:fixed;
+			top: 0;
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			transform: translateX(100vw);
+			transition: .6s;
+		}
+		.nav.active {
+			
+			transform: translateX(0vw);
 		}
 		.nav > *{
-			margin: 0;
+			font-size: 2.5rem;
+			color: #000;
+			transition: .4s;
+			
+		}
+		.router-link-active {
+			border: 0;
+			color: #fff;
+		}
+		.btn-burger{
+			visibility: visible;
 		}
     }
 

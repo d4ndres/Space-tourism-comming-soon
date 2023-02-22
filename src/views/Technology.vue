@@ -129,5 +129,21 @@ import { mapState } from 'vuex';
         .ghost-between-flex{
             display: none;
         }
+        .circle-piece{
+           width: 3rem;
+           margin: 0 1rem;
+           height: 3rem;
+           
+        }
+        .sub-nav{
+            padding: 0 0 2rem 0;
+        }
+    }
+    @media screen and (max-width: 500px){
+        .title-page{
+            font-size: 1rem;
+            text-align: center;
+      
+        }
     }
 </style>

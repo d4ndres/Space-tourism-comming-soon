@@ -114,6 +114,24 @@
             margin: 2rem 0;
         }
     }
+    @media screen and (max-width: 500px){
+        .home__about__introduction{
+            font-size: 1.6rem;
+            margin-top: 1.2rem;
+        }
+        .home__about__title {
+            font-size: 6rem;
+            margin: 1rem 0;
+        }
+        .explore{
+            width: 11rem;
+            height: 11rem;
+            font-size: 1.4rem;
+        }
+        .home__about__content{
+            font-size: 1rem;
+        }
+    }
 
 
 </style>

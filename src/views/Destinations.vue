@@ -121,4 +121,11 @@ import { mapState } from 'vuex';
 
 
     }
+    
+    @media screen and (max-width: 500px) {
+        .title-page{
+            font-size: 1rem;
+            text-align: center;
+        }
+    }
 </style>

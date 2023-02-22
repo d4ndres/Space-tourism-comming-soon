@@ -3,7 +3,8 @@ import data from '@/data.json'
 
 export default createStore({
   state: {
-    data: data
+    data: data,
+    state: false
   },
   getters: {
     srcImg(){
@@ -14,6 +15,9 @@ export default createStore({
 
   },
   mutations: {
+    updateState( state, newState ){
+      state.state = newState
+    }
   },
   actions: {
   },

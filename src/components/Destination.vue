@@ -133,4 +133,21 @@ import { mapGetters } from 'vuex';
         }
 
     }
+    @media screen and (max-width: 500px){
+        .destination figure {
+            width: 50vw;
+        }
+        .about__title{
+            font-size: 4rem;
+        }
+        .about__description{
+            font-size: 1rem;
+        }
+        .stats__item h3{
+            font-size: 1.3rem;
+        }
+        .about__stats{
+            padding: 0 0 0 1rem;
+        }
+    }
 </style>

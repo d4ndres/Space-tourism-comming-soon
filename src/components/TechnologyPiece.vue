@@ -2,7 +2,8 @@
     <article class="piece">
         
         <figure>
-            <img :src=" srcImg( piece.images.portrait ) " :alt="piece.name">
+            <img v-if="isDesktop" :src=" srcImg( piece.images.portrait )" :alt="piece.name">
+            <img v-else :src=" srcImg( piece.images.landscape )" :alt="piece.name">
         </figure>
         
         <div class="about">
@@ -19,6 +20,11 @@ import { mapGetters } from 'vuex';
 
 
     export default {
+        data() {
+            return {
+                isDesktop: true
+            }
+        },
         props:{
             pieceName:{
                 type: String,
@@ -30,6 +36,9 @@ import { mapGetters } from 'vuex';
                 return this.$store.state.data.technology.find( item => item.name == this.pieceName)
             },
             ...mapGetters(['srcImg'])     
+        },
+        mounted(){
+            this.isDesktop = window.innerWidth > 500 ? true: false
         }
     }
 </script>
@@ -83,6 +92,14 @@ import { mapGetters } from 'vuex';
         }
         .about{
             margin: 2rem 0;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .about h1{
+            font-size: 2rem;
+        }
+        .about p {
+            font-size: 1rem;
         }
     }
 </style>

@@ -85,4 +85,26 @@ import { mapGetters } from 'vuex';
            
         }
     }
+
+    @media screen and (max-width: 500px){
+        .destination figure {
+            width: 50vw;
+        }
+        .about__role{
+            font-size: 1.1rem;
+        }
+        .about__name{
+            font-size: 1.5rem;
+        }
+        .about__bio{
+            font-size: 1rem;
+        }
+        figure{
+            position: relative;
+            height: 300px;
+            border-bottom: solid .5px var(--gray);
+            margin-bottom: 2rem;
+        }
+
+    }    
 </style>
